@@ -40,7 +40,7 @@ export default {
       >
         <div class="px-8 max-w-[560px] w-full overflow-auto">
           <div class="mb-4">
-            <img
+            <!-- <img
               :src="globalConfig.logo"
               :alt="globalConfig.installationName"
               class="block w-auto h-8 dark:hidden"
@@ -50,7 +50,7 @@ export default {
               :src="globalConfig.logoDark"
               :alt="globalConfig.installationName"
               class="hidden w-auto h-8 dark:block"
-            />
+            /> -->
             <h2
               class="mt-6 text-3xl font-medium text-left mb-7 text-n-slate-12"
             >
