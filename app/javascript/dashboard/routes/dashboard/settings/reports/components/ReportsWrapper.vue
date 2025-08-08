@@ -14,7 +14,7 @@
     }
 
     .multiselect__content-wrapper {
-      @apply bg-n-solid-2 border border-n-weak text-n-slate-12;
+      @apply bg-n-slate-1 border border-n-weak text-n-slate-12;
     }
 
     .multiselect__tags {

@@ -157,7 +157,7 @@ const table = useVueTable({
 
 <template>
   <div
-    class="shadow outline-1 outline outline-n-container rounded-xl bg-n-solid-2 px-6 py-5"
+    class="shadow outline-1 outline outline-n-container rounded-xl bg-n-slate-1 px-6 py-5"
   >
     <Table :table="table" class="max-h-[calc(100vh-21.875rem)]" />
     <div

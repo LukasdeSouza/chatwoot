@@ -1,0 +1,140 @@
+// Estilização personalizada para sidebar laranja
+// Aplicação direta das cores laranja no sidebar
+
+// Sidebar principal - sobrescreve bg-n-solid-2
+aside.bg-n-solid-2 {
+  background: rgb(var(--orange-3)) !important;
+  border-color: rgb(var(--orange-6)) !important;
+}
+
+// No modo escuro
+.dark aside.bg-n-solid-2 {
+  background: rgb(var(--orange-2)) !important;
+  border-color: rgb(var(--orange-4)) !important;
+}
+
+// Search box e compose button - sobrescreve bg-n-solid-3
+aside .bg-n-solid-3 {
+  background: rgb(var(--orange-4)) !important;
+  border-color: rgb(var(--orange-6)) !important;
+}
+
+.dark aside .bg-n-solid-3 {
+  background: rgb(var(--orange-3)) !important;
+  border-color: rgb(var(--orange-4)) !important;
+}
+
+// Outline classes no sidebar
+aside .outline-n-weak {
+  outline-color: rgb(var(--orange-6)) !important;
+}
+
+.dark aside .outline-n-weak {
+  outline-color: rgb(var(--orange-4)) !important;
+}
+
+// Text colors no sidebar
+aside .text-n-slate-11 {
+  color: rgb(var(--orange-11)) !important;
+}
+
+aside .text-n-slate-12 {
+  color: rgb(var(--orange-12)) !important;
+}
+
+.dark aside .text-n-slate-11 {
+  color: rgb(var(--orange-11)) !important;
+}
+
+.dark aside .text-n-slate-12 {
+  color: rgb(var(--orange-12)) !important;
+}
+
+// Border colors no sidebar
+aside .border-n-weak {
+  border-color: rgb(var(--orange-6)) !important;
+}
+
+.dark aside .border-n-weak {
+  border-color: rgb(var(--orange-4)) !important;
+}
+
+// Divider entre logo e account switcher
+aside .bg-n-strong {
+  background: rgb(var(--orange-7)) !important;
+}
+
+.dark aside .bg-n-strong {
+  background: rgb(var(--orange-5)) !important;
+}
+
+// Hover states para links e botões no sidebar
+aside a:hover,
+aside button:hover {
+  background: rgb(var(--orange-5)) !important;
+}
+
+.dark aside a:hover,
+.dark aside button:hover {
+  background: rgb(var(--orange-4)) !important;
+}
+
+// Estados ativos de navegação
+aside .router-link-active {
+  background: rgb(var(--orange-6)) !important;
+  color: rgb(var(--orange-12)) !important;
+}
+
+.dark aside .router-link-active {
+  background: rgb(var(--orange-5)) !important;
+  color: rgb(var(--orange-12)) !important;
+}
+
+// Icons no sidebar
+aside .i-lucide-search,
+aside .i-lucide-pen-line,
+aside [class*="i-lucide-"],
+aside [class*="i-woot-"] {
+  color: rgb(var(--orange-11)) !important;
+}
+
+.dark aside .i-lucide-search,
+.dark aside .i-lucide-pen-line,
+.dark aside [class*="i-lucide-"],
+.dark aside [class*="i-woot-"] {
+  color: rgb(var(--orange-11)) !important;
+}
+
+// Shadow personalizada no mobile
+@media (max-width: 768px) {
+  aside.shadow-lg {
+    box-shadow: 0 20px 25px -5px rgba(255, 145, 77, 0.2), 
+                0 10px 10px -5px rgba(255, 145, 77, 0.1) !important;
+  }
+}
+
+// Scrollbar personalizada
+aside.no-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+aside.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+aside.no-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(var(--orange-6));
+  border-radius: 2px;
+}
+
+aside.no-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--orange-7));
+}
+
+.dark aside.no-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(var(--orange-4));
+}
+
+.dark aside.no-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--orange-5));
+}

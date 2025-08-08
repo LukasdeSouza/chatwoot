@@ -195,6 +195,21 @@ export const colors = {
       12: 'rgb(var(--teal-12) / <alpha-value>)',
     },
 
+    orange: {
+      1: 'rgb(var(--orange-1) / <alpha-value>)',
+      2: 'rgb(var(--orange-2) / <alpha-value>)',
+      3: 'rgb(var(--orange-3) / <alpha-value>)',
+      4: 'rgb(var(--orange-4) / <alpha-value>)',
+      5: 'rgb(var(--orange-5) / <alpha-value>)',
+      6: 'rgb(var(--orange-6) / <alpha-value>)',
+      7: 'rgb(var(--orange-7) / <alpha-value>)',
+      8: 'rgb(var(--orange-8) / <alpha-value>)',
+      9: 'rgb(var(--orange-9) / <alpha-value>)',
+      10: 'rgb(var(--orange-10) / <alpha-value>)',
+      11: 'rgb(var(--orange-11) / <alpha-value>)',
+      12: 'rgb(var(--orange-12) / <alpha-value>)',
+    },
+
     gray: {
       1: 'rgb(var(--gray-1) / <alpha-value>)',
       2: 'rgb(var(--gray-2) / <alpha-value>)',
@@ -211,7 +226,7 @@ export const colors = {
     },
 
     black: '#000000',
-    brand: '#2781F6',
+    brand: '#ff914d',
     background: 'rgb(var(--background-color) / <alpha-value>)',
     solid: {
       1: 'rgb(var(--solid-1) / <alpha-value>)',
@@ -221,6 +236,7 @@ export const colors = {
       amber: 'rgb(var(--solid-amber) / <alpha-value>)',
       blue: 'rgb(var(--solid-blue) / <alpha-value>)',
       iris: 'rgb(var(--solid-iris) / <alpha-value>)',
+      orange: 'rgb(var(--solid-orange) / <alpha-value>)',
     },
     alpha: {
       1: 'rgba(var(--alpha-1))',

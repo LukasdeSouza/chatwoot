@@ -201,7 +201,7 @@ onMounted(async () => {
       />
       <div
         v-if="isConversationLoading"
-        class="flex items-center flex-1 my-4 justify-center bg-n-solid-1"
+        class="flex items-center flex-1 my-4 justify-center bg-n-slate-1"
       >
         <Spinner class="text-n-brand" />
       </div>

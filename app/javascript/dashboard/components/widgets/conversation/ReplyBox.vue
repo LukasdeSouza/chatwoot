@@ -1271,7 +1271,7 @@ export default {
 .reply-box {
   transition: height 2s cubic-bezier(0.37, 0, 0.63, 1);
 
-  @apply relative mb-2 mx-2 border border-n-weak rounded-xl bg-n-solid-1;
+  @apply relative mb-2 mx-2 border border-n-weak rounded-xl bg-n-slate-1;
 
   &.is-private {
     @apply bg-n-solid-amber dark:border-n-amber-3/10 border-n-amber-12/5;

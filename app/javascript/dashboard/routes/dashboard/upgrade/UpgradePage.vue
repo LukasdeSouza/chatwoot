@@ -111,7 +111,7 @@ defineExpose({ shouldShowUpgradePage });
     class="mx-auto h-full pt-[clamp(3rem,15vh,12rem)]"
   >
     <div
-      class="flex flex-col gap-4 max-w-md px-8 py-6 shadow-lg bg-n-solid-1 rounded-xl outline outline-1 outline-n-container"
+      class="flex flex-col gap-4 max-w-md px-8 py-6 shadow-lg bg-n-slate-1 rounded-xl outline outline-1 outline-n-container"
     >
       <div class="flex flex-col gap-4">
         <div class="flex items-center w-full gap-2">

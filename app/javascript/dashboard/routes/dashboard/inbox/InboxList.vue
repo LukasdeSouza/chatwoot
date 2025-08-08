@@ -227,7 +227,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="flex w-full h-full bg-n-solid-1">
+  <section class="flex w-full h-full bg-n-slate-1">
     <div
       class="flex flex-col h-full w-full lg:min-w-[340px] lg:max-w-[340px] ltr:border-r rtl:border-l border-n-weak"
       :class="!currentConversationId ? 'flex' : 'hidden xl:flex'"

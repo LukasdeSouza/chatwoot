@@ -33,55 +33,77 @@ export default {
 </script>
 
 <template>
-  <div class="w-full h-full bg-n-background">
-    <div v-show="!isLoading" class="flex h-full min-h-screen items-center">
-      <div
-        class="flex-1 min-h-[640px] inline-flex items-center h-full justify-center overflow-auto py-6"
-      >
-        <div class="px-8 max-w-[560px] w-full overflow-auto">
-          <div class="mb-4">
-            <!-- <img
+  <div class="signup-container">
+    <div v-show="!isLoading" class="flex h-full min-h-screen items-center w-full max-w-6xl mx-auto">
+      <!-- Left Panel - Signup Form -->
+      <div class="signup-left-panel flex-1 min-h-[640px] inline-flex items-center h-full justify-center overflow-auto">
+        <div class="w-full max-w-md signup-form-container">
+          <!-- Header -->
+          <div class="signup-header">
+            <div class="signup-logo" v-if="!globalConfig.logo && !globalConfig.logoDark">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+              </svg>
+            </div>
+            <img
+              v-if="globalConfig.logo"
               :src="globalConfig.logo"
               :alt="globalConfig.installationName"
-              class="block w-auto h-8 dark:hidden"
+              class="h-12 w-auto mb-6 dark:hidden"
             />
             <img
               v-if="globalConfig.logoDark"
               :src="globalConfig.logoDark"
               :alt="globalConfig.installationName"
-              class="hidden w-auto h-8 dark:block"
-            /> -->
-            <h2
-              class="mt-6 text-3xl font-medium text-left mb-7 text-n-slate-12"
-            >
+              class="hidden h-12 w-auto mb-6 dark:block"
+            />
+            
+            <h1 class="signup-title">
               {{ $t('REGISTER.TRY_WOOT') }}
-            </h2>
+            </h1>
+            <p class="signup-subtitle">
+              {{ $t('REGISTER.SUBTITLE') || 'Comece a conversar com seus clientes hoje mesmo' }}
+            </p>
           </div>
-          <SignupForm />
-          <div class="px-1 text-sm text-n-slate-12">
-            <span>{{ $t('REGISTER.HAVE_AN_ACCOUNT') }}</span>
-            <router-link class="text-link text-n-brand" to="/app/login">
-              {{
-                useInstallationName(
-                  $t('LOGIN.TITLE'),
-                  globalConfig.installationName
-                )
-              }}
-            </router-link>
+
+          <!-- Signup Form -->
+          <div class="signup-form">
+            <SignupForm />
+            
+            <!-- Login Link -->
+            <div class="signup-login-link">
+              <span>{{ $t('REGISTER.HAVE_AN_ACCOUNT') }}</span>
+              <router-link to="/app/login">
+                {{
+                  useInstallationName(
+                    $t('LOGIN.TITLE'),
+                    globalConfig.installationName
+                  )
+                }}
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
-      <Testimonials
-        v-if="isAChatwootInstance"
-        class="flex-1"
-        @resize-containers="resizeContainers"
-      />
+
+      <!-- Right Panel - Testimonials -->
+      <div 
+        v-if="isAChatwootInstance" 
+        class="signup-right-panel flex-1"
+      >
+        <Testimonials @resize-containers="resizeContainers" />
+      </div>
     </div>
+    
+    <!-- Loading State -->
     <div
       v-show="isLoading"
-      class="flex items-center min-h-screen justify-center w-full h-full"
+      class="signup-loading"
     >
-      <Spinner color-scheme="primary" size="" />
+      <Spinner color-scheme="primary" size="lg" />
+      <p class="signup-loading-text">
+        {{ $t('REGISTER.LOADING') || 'Carregando...' }}
+      </p>
     </div>
   </div>
 </template>

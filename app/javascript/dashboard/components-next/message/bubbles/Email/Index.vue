@@ -99,7 +99,7 @@ const handleSeeOriginal = () => {
     class="w-full"
     :class="{
       'bg-n-slate-4': isIncoming,
-      'bg-n-solid-blue': isOutgoing,
+      'bg-n-orange-4': isOutgoing,
     }"
     data-bubble-name="email"
   >
@@ -123,7 +123,7 @@ const handleSeeOriginal = () => {
           :class="{
             'bg-gradient-to-t from-n-slate-4 via-n-slate-4 via-20% to-transparent':
               isIncoming,
-            'bg-gradient-to-t from-n-solid-blue via-n-solid-blue via-20% to-transparent':
+            'bg-gradient-to-t from-n-orange-4 via-n-orange-4 via-20% to-transparent':
               isOutgoing,
           }"
         >

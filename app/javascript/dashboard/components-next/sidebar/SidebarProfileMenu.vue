@@ -78,16 +78,7 @@ const menuItems = computed(() => {
       },
     },
     {
-      show: true,
-      showOnCustomBrandedInstance: false,
-      label: t('SIDEBAR_ITEMS.DOCS'),
-      icon: 'i-lucide-book',
-      link: 'https://www.chatwoot.com/hc/user-guide/en',
-      nativeLink: true,
-      target: '_blank',
-    },
-    {
-      show: currentUser.value.type === 'SuperAdmin',
+      show: false, // Comentado: currentUser.value.type === 'SuperAdmin',
       showOnCustomBrandedInstance: true,
       label: t('SIDEBAR_ITEMS.SUPER_ADMIN_CONSOLE'),
       icon: 'i-lucide-castle',

@@ -16,6 +16,15 @@
 @import 'plugins/multiselect';
 @import 'plugins/date-picker';
 
+// Sidebar orange theme
+@import 'sidebar-orange';
+
+// Signup page styles
+@import '../../../v3/views/auth/signup/signup-styles';
+
+// Login page styles
+@import '../../../v3/views/login/login-styles';
+
 html,
 body {
   font-family:

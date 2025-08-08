@@ -19,7 +19,7 @@ const onClick = name => {
 <template>
   <div
     :key="controlItem.name"
-    class="pt-3 ltr:pl-4 rtl:pr-4 ltr:pr-2 rtl:pl-2 pb-5 gap-2 flex flex-col w-full shadow outline-1 outline outline-n-container rounded-2xl bg-n-solid-2 cursor-pointer"
+    class="pt-3 ltr:pl-4 rtl:pr-4 ltr:pr-2 rtl:pl-2 pb-5 gap-2 flex flex-col w-full shadow outline-1 outline outline-n-container rounded-2xl bg-n-slate-1 cursor-pointer"
     @click="onClick(controlItem.routeName)"
   >
     <div class="flex items-center justify-between w-full gap-1 h-8">

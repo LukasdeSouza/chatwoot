@@ -86,7 +86,7 @@ export default {
 <!-- Added ref for writing specs -->
 <template>
   <div
-    class="flex-col lg:flex-row flex flex-wrap mx-0 shadow outline-1 outline outline-n-container rounded-xl bg-n-solid-2 px-6 py-8 gap-4"
+    class="flex-col lg:flex-row flex flex-wrap mx-0 shadow outline-1 outline outline-n-container rounded-xl bg-n-slate-1 px-6 py-8 gap-4"
   >
     <CsatMetricCard
       :label="$t('CSAT_REPORTS.METRIC.TOTAL_RESPONSES.LABEL')"

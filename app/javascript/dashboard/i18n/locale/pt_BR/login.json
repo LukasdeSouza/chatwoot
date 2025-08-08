@@ -1,8 +1,8 @@
 {
   "LOGIN": {
-    "TITLE": "ChatPro - Codetech Software",
+    "TITLE": "OmniTech",
     "EMAIL": {
-      "LABEL": "e-mail",
+      "LABEL": "E-mail",
       "PLACEHOLDER": "nome{'@'}empresa.com.br",
       "ERROR": "Digite um endereço de endereço eletrônico válido"
     },

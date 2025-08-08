@@ -75,7 +75,8 @@ const computedColor = computed(() => {
   if (attrs.amber || attrs.amber === '') return 'amber';
   if (attrs.slate || attrs.slate === '') return 'slate';
   if (attrs.teal || attrs.teal === '') return 'teal';
-  return 'blue'; // Default color
+  if (attrs.orange || attrs.orange === '') return 'orange';
+  return 'orange'; // Default color
 });
 
 const computedSize = computed(() => {
@@ -151,6 +152,17 @@ const STYLE_CONFIG = {
       link: 'text-n-teal-9 hover:enabled:underline focus-visible:underline outline-transparent',
       ghost:
         'text-n-teal-9 hover:enabled:bg-n-alpha-2 focus-visible:bg-n-alpha-2 outline-transparent',
+    },
+    orange: {
+      solid:
+        'bg-n-orange-9 text-white hover:enabled:bg-n-orange-10 focus-visible:bg-n-orange-10 outline-transparent',
+      faded:
+        'bg-n-orange-9/10 text-n-slate-12 hover:enabled:bg-n-orange-9/20 focus-visible:bg-n-orange-9/20 outline-transparent',
+      outline:
+        'text-n-orange-11 hover:enabled:bg-n-orange-9/10 focus-visible:bg-n-orange-9/10 outline-n-orange-9',
+      link: 'text-n-orange-9 hover:enabled:underline focus-visible:underline outline-transparent',
+      ghost:
+        'text-n-orange-9 hover:enabled:bg-n-alpha-2 focus-visible:bg-n-alpha-2 outline-transparent',
     },
   },
   sizes: {
