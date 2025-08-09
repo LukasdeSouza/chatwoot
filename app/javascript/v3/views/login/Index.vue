@@ -201,13 +201,13 @@ export default {
         
         <div class="brand-content">
           <h1 class="brand-title">
-            {{ globalConfig.installationName || 'Chatwoot' }}
+           OmniTech
           </h1>
           <p class="brand-subtitle">
             Transforme a comunicação com seus clientes em experiências extraordinárias.
           </p>
           <small class="brand-credits">
-            desenvolvido por Codetech Software
+            desenvolvido por OmniTech Solutions
           </small>
           
           <!-- Features list -->

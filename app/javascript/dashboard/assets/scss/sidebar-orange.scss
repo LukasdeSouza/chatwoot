@@ -80,14 +80,29 @@ aside button:hover {
 }
 
 // Estados ativos de navegação
-aside .router-link-active {
+aside .router-link-active,
+aside .router-link-active *,
+aside .text-n-blue-text,
+aside .active {
   background: rgb(var(--orange-6)) !important;
   color: rgb(var(--orange-12)) !important;
 }
 
-.dark aside .router-link-active {
+.dark aside .router-link-active,
+.dark aside .router-link-active *,
+.dark aside .text-n-blue-text,
+.dark aside .active {
   background: rgb(var(--orange-5)) !important;
   color: rgb(var(--orange-12)) !important;
+}
+
+// Background para estados ativos
+aside .bg-n-alpha-2 {
+  background: rgb(var(--orange-4) / 0.3) !important;
+}
+
+.dark aside .bg-n-alpha-2 {
+  background: rgb(var(--orange-6) / 0.3) !important;
 }
 
 // Icons no sidebar

@@ -80,12 +80,12 @@ function getHeatmapLevelClass(value) {
   }
 
   const classes = [
-    'bg-n-blue-3 dark:outline-n-blue-4',
-    'bg-n-blue-5 dark:outline-n-blue-6',
-    'bg-n-blue-7 dark:outline-n-blue-8',
-    'bg-n-blue-8 dark:outline-n-blue-9',
-    'bg-n-blue-10 dark:outline-n-blue-8',
-    'bg-n-blue-11 dark:outline-n-blue-10',
+    'bg-n-orange-3 dark:outline-n-orange-4',
+    'bg-n-orange-5 dark:outline-n-orange-6',
+    'bg-n-orange-7 dark:outline-n-orange-8',
+    'bg-n-orange-8 dark:outline-n-orange-9',
+    'bg-n-orange-10 dark:outline-n-orange-8',
+    'bg-n-orange-11 dark:outline-n-orange-10',
   ];
 
   return classes[level - 1];

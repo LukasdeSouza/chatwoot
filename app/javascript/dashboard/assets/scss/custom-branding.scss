@@ -1,0 +1,203 @@
+/* OmniTech Custom Branding Styles */
+
+/* Primary Color Overrides */
+:root {
+  --omni-primary: #f97316;
+  --omni-primary-hover: #ea580c;
+  --omni-primary-light: #fed7aa;
+  --omni-gradient: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
+  --omni-secondary: #fb923c;
+}
+
+/* Logo and Brand Elements */
+.brand-gradient {
+  background: var(--omni-gradient);
+  color: white;
+}
+
+/* Button Primary Overrides */
+.btn-primary,
+.button--primary,
+[class*="bg-woot"],
+[class*="bg-n-brand"] {
+  background: var(--omni-gradient) !important;
+  border-color: var(--omni-primary) !important;
+}
+
+.btn-primary:hover,
+.button--primary:hover {
+  background: var(--omni-primary-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+ 
+/* Link Colors */
+a[class*="text-woot"],
+a[class*="text-n-blue"],
+.text-woot,
+.text-n-blue-text {
+  color: var(--omni-primary) !important;
+}
+
+/* Sidebar Active States */
+aside .text-n-blue-text,
+aside .router-link-active,
+aside .active {
+  color: var(--omni-primary) !important;
+}
+
+.dark aside .text-n-blue-text,
+.dark aside .router-link-active,
+.dark aside .active {
+  color: var(--omni-secondary) !important;
+}
+
+/* Focus States */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--omni-primary) !important;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1) !important;
+}
+
+/* Sidebar Enhancements */
+.sidebar-item:hover {
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Card Enhancements */
+.card,
+[class*="border-n-weak"] {
+  border: 1px solid rgba(249, 115, 22, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  border-color: rgba(249, 115, 22, 0.2);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Badge and Label Styles */
+.badge,
+.label {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Header Enhancements */
+.app-header,
+.dashboard-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+/* Dark Mode Support */
+.dark {
+  --omni-primary: #fb923c;
+  --omni-primary-hover: #f97316;
+  --omni-primary-light: #431407;
+}
+
+.dark .card,
+.dark [class*="border-n-weak"] {
+  border-color: rgba(251, 146, 60, 0.2);
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.dark .app-header,
+.dark .dashboard-header {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(251, 146, 60, 0.2);
+}
+
+/* Animation Enhancements */
+@keyframes omni-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: omni-fade-in 0.3s ease-out;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(249, 115, 22, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.5);
+}
+
+/* Loading States */
+.loading-spinner {
+  border-top-color: var(--omni-primary);
+}
+
+/* Toast Notifications */
+.toast,
+.notification {
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border-radius: 16px;
+  border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+/* Form Enhancements */
+.form-group label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.dark .form-group label {
+  color: #e5e7eb;
+}
+
+/* Table Enhancements */
+.table th {
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid rgba(249, 115, 22, 0.1);
+}
+
+.dark .table th {
+  color: #e5e7eb;
+  border-bottom-color: rgba(251, 146, 60, 0.2);
+}
+
+/* Custom Status Indicators */
+.status-online {
+  background: #10b981;
+}
+
+.status-busy {
+  background: #f59e0b;
+}
+
+.status-offline {
+  background: #6b7280;
+}

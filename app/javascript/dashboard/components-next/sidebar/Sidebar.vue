@@ -331,53 +331,6 @@ const menuItems = computed(() => {
       ],
     },
     {
-      name: 'Portals',
-      label: t('SIDEBAR.HELP_CENTER.TITLE'),
-      icon: 'i-lucide-library-big',
-      children: [
-        {
-          name: 'Articles',
-          label: t('SIDEBAR.HELP_CENTER.ARTICLES'),
-          activeOn: [
-            'portals_articles_index',
-            'portals_articles_new',
-            'portals_articles_edit',
-          ],
-          to: accountScopedRoute('portals_index', {
-            navigationPath: 'portals_articles_index',
-          }),
-        },
-        {
-          name: 'Categories',
-          label: t('SIDEBAR.HELP_CENTER.CATEGORIES'),
-          activeOn: [
-            'portals_categories_index',
-            'portals_categories_articles_index',
-            'portals_categories_articles_edit',
-          ],
-          to: accountScopedRoute('portals_index', {
-            navigationPath: 'portals_categories_index',
-          }),
-        },
-        {
-          name: 'Locales',
-          label: t('SIDEBAR.HELP_CENTER.LOCALES'),
-          activeOn: ['portals_locales_index'],
-          to: accountScopedRoute('portals_index', {
-            navigationPath: 'portals_locales_index',
-          }),
-        },
-        {
-          name: 'Settings',
-          label: t('SIDEBAR.HELP_CENTER.SETTINGS'),
-          activeOn: ['portals_settings_index'],
-          to: accountScopedRoute('portals_index', {
-            navigationPath: 'portals_settings_index',
-          }),
-        },
-      ],
-    },
-    {
       name: 'Settings',
       label: t('SIDEBAR.SETTINGS'),
       icon: 'i-lucide-bolt',
@@ -551,3 +504,64 @@ const menuItems = computed(() => {
     </section>
   </aside>
 </template>
+
+<style scoped>
+/* OmniTech Sidebar Customization */
+aside {
+  background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+  border-right: 1px solid #e2e8f0;
+}
+
+.dark aside {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+  border-right: 1px solid #334155;
+}
+
+/* Logo container enhancement */
+.flex.items-center.px-2.py-3 {
+  background: linear-gradient(90deg, #fb923c 0%, #f97316 100%);
+  border-radius: 8px;
+  margin: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.25);
+}
+
+.flex.items-center.px-2.py-3 * {
+  color: white !important;
+}
+
+/* Search bar enhancement */
+.outline.outline-1.outline-n-weak {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(251, 146, 60, 0.2);
+  transition: all 0.2s ease;
+}
+
+.outline.outline-1.outline-n-weak:hover {
+  border-color: rgba(251, 146, 60, 0.4);
+  box-shadow: 0 2px 8px rgba(251, 146, 60, 0.1);
+}
+
+.dark .outline.outline-1.outline-n-weak {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Navigation enhancement */
+nav {
+  padding-top: 16px;
+}
+
+/* Footer section enhancement */
+section:last-child {
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(251, 146, 60, 0.1);
+}
+
+.dark section:last-child {
+  background: rgba(15, 23, 42, 0.8);
+  border-top: 1px solid rgba(249, 115, 22, 0.2);
+}
+</style>
