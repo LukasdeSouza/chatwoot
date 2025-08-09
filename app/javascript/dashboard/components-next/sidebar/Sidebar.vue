@@ -124,7 +124,7 @@ const menuItems = computed(() => {
     {
       name: 'Inbox',
       label: t('SIDEBAR.INBOX'),
-      icon: 'i-lucide-inbox',
+      icon: 'i-lucide-mail-open',
       to: accountScopedRoute('inbox_view'),
       activeOn: ['inbox_view', 'inbox_view_conversation'],
       getterKeys: {
@@ -134,7 +134,7 @@ const menuItems = computed(() => {
     {
       name: 'Conversation',
       label: t('SIDEBAR.CONVERSATIONS'),
-      icon: 'i-lucide-message-circle',
+      icon: 'i-lucide-message-circle-more',
       children: [
         {
           name: 'All',
@@ -157,7 +157,7 @@ const menuItems = computed(() => {
         {
           name: 'Folders',
           label: t('SIDEBAR.CUSTOM_VIEWS_FOLDER'),
-          icon: 'i-lucide-folder',
+          icon: 'i-lucide-folder-open',
           activeOn: ['conversations_through_folders'],
           children: conversationCustomViews.value.map(view => ({
             name: `${view.name}-${view.id}`,
@@ -168,7 +168,7 @@ const menuItems = computed(() => {
         {
           name: 'Teams',
           label: t('SIDEBAR.TEAMS'),
-          icon: 'i-lucide-users',
+          icon: 'i-lucide-users-round',
           activeOn: ['conversations_through_team'],
           children: teams.value.map(team => ({
             name: `${team.name}-${team.id}`,
@@ -179,7 +179,7 @@ const menuItems = computed(() => {
         {
           name: 'Channels',
           label: t('SIDEBAR.CHANNELS'),
-          icon: 'i-lucide-mailbox',
+          icon: 'i-lucide-hash',
           activeOn: ['conversation_through_inbox'],
           children: sortedInboxes.value.map(inbox => ({
             name: `${inbox.name}-${inbox.id}`,
@@ -196,7 +196,7 @@ const menuItems = computed(() => {
         {
           name: 'Labels',
           label: t('SIDEBAR.LABELS'),
-          icon: 'i-lucide-tag',
+          icon: 'i-lucide-bookmark',
           activeOn: ['conversations_through_label'],
           children: labels.value.map(label => ({
             name: `${label.title}-${label.id}`,
@@ -215,7 +215,7 @@ const menuItems = computed(() => {
     {
       name: 'Contacts',
       label: t('SIDEBAR.CONTACTS'),
-      icon: 'i-lucide-contact',
+      icon: 'i-lucide-user-round-check',
       children: [
         {
           name: 'All Contacts',
@@ -235,7 +235,7 @@ const menuItems = computed(() => {
         },
         {
           name: 'Segments',
-          icon: 'i-lucide-group',
+          icon: 'i-lucide-users-round',
           label: t('SIDEBAR.CUSTOM_VIEWS_SEGMENTS'),
           children: contactCustomViews.value.map(view => ({
             name: `${view.name}-${view.id}`,
@@ -253,7 +253,7 @@ const menuItems = computed(() => {
         },
         {
           name: 'Tagged With',
-          icon: 'i-lucide-tag',
+          icon: 'i-lucide-bookmark',
           label: t('SIDEBAR.TAGGED_WITH'),
           children: labels.value.map(label => ({
             name: `${label.title}-${label.id}`,
@@ -278,7 +278,8 @@ const menuItems = computed(() => {
     {
       name: 'Reports',
       label: t('SIDEBAR.REPORTS'),
-      icon: 'i-lucide-chart-spline',
+      icon: 'i-lucide-trending-up',
+      icon: 'i-lucide-trending-up',
       children: [
         {
           name: 'Report Overview',
@@ -311,7 +312,7 @@ const menuItems = computed(() => {
     {
       name: 'Campaigns',
       label: t('SIDEBAR.CAMPAIGNS'),
-      icon: 'i-lucide-megaphone',
+      icon: 'i-lucide-send',
       children: [
         {
           name: 'Live chat',
@@ -333,90 +334,90 @@ const menuItems = computed(() => {
     {
       name: 'Settings',
       label: t('SIDEBAR.SETTINGS'),
-      icon: 'i-lucide-bolt',
+      icon: 'i-lucide-settings',
       children: [
         {
           name: 'Settings Account Settings',
           label: t('SIDEBAR.ACCOUNT_SETTINGS'),
-          icon: 'i-lucide-briefcase',
+          icon: 'i-lucide-building',
           to: accountScopedRoute('general_settings_index'),
         },
         {
           name: 'Settings Agents',
           label: t('SIDEBAR.AGENTS'),
-          icon: 'i-lucide-square-user',
+          icon: 'i-lucide-user-cog',
           to: accountScopedRoute('agent_list'),
         },
         {
           name: 'Settings Teams',
           label: t('SIDEBAR.TEAMS'),
-          icon: 'i-lucide-users',
+          icon: 'i-lucide-users-round',
           to: accountScopedRoute('settings_teams_list'),
         },
         {
           name: 'Settings Inboxes',
           label: t('SIDEBAR.INBOXES'),
-          icon: 'i-lucide-inbox',
+          icon: 'i-lucide-mail-open',
           to: accountScopedRoute('settings_inbox_list'),
         },
         {
           name: 'Settings Labels',
           label: t('SIDEBAR.LABELS'),
-          icon: 'i-lucide-tags',
+          icon: 'i-lucide-bookmark-plus',
           to: accountScopedRoute('labels_list'),
         },
         {
           name: 'Settings Custom Attributes',
           label: t('SIDEBAR.CUSTOM_ATTRIBUTES'),
-          icon: 'i-lucide-code',
+          icon: 'i-lucide-database',
           to: accountScopedRoute('attributes_list'),
         },
         {
           name: 'Settings Automation',
           label: t('SIDEBAR.AUTOMATION'),
-          icon: 'i-lucide-workflow',
+          icon: 'i-lucide-zap',
           to: accountScopedRoute('automation_list'),
         },
         {
           name: 'Settings Agent Bots',
           label: t('SIDEBAR.AGENT_BOTS'),
-          icon: 'i-lucide-bot',
+          icon: 'i-lucide-robot',
           to: accountScopedRoute('agent_bots'),
         },
         {
           name: 'Settings Macros',
           label: t('SIDEBAR.MACROS'),
-          icon: 'i-lucide-toy-brick',
+          icon: 'i-lucide-play-circle',
           to: accountScopedRoute('macros_wrapper'),
         },
         {
           name: 'Settings Canned Responses',
           label: t('SIDEBAR.CANNED_RESPONSES'),
-          icon: 'i-lucide-message-square-quote',
+          icon: 'i-lucide-message-square-text',
           to: accountScopedRoute('canned_list'),
         },
         {
           name: 'Settings Integrations',
           label: t('SIDEBAR.INTEGRATIONS'),
-          icon: 'i-lucide-blocks',
+          icon: 'i-lucide-puzzle',
           to: accountScopedRoute('settings_applications'),
         },
         {
           name: 'Settings Audit Logs',
           label: t('SIDEBAR.AUDIT_LOGS'),
-          icon: 'i-lucide-briefcase',
+          icon: 'i-lucide-file-text',
           to: accountScopedRoute('auditlogs_list'),
         },
         {
           name: 'Settings Custom Roles',
           label: t('SIDEBAR.CUSTOM_ROLES'),
-          icon: 'i-lucide-shield-plus',
+          icon: 'i-lucide-shield-check',
           to: accountScopedRoute('custom_roles_list'),
         },
         {
           name: 'Settings Sla',
           label: t('SIDEBAR.SLA'),
-          icon: 'i-lucide-clock-alert',
+          icon: 'i-lucide-timer',
           to: accountScopedRoute('sla_list'),
         },
         {
@@ -476,7 +477,7 @@ const menuItems = computed(() => {
         <ComposeConversation align-position="right">
           <template #trigger="{ toggle }">
             <Button
-              icon="i-lucide-pen-line"
+              icon="i-lucide-message-square-plus"
               color="slate"
               size="sm"
               class="!h-7 !bg-n-solid-3 dark:!bg-n-black/30 !outline-n-weak !text-n-slate-11"
@@ -508,13 +509,13 @@ const menuItems = computed(() => {
 <style scoped>
 /* OmniTech Sidebar Customization */
 aside {
-  background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
-  border-right: 1px solid #e2e8f0;
+  background: linear-gradient(145deg, #fff7ed 0%, #fed7aa 100%);
+  border-right: 1px solid #fb923c;
 }
 
 .dark aside {
-  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-  border-right: 1px solid #334155;
+  background: linear-gradient(145deg, #431407 0%, #7c2d12 100%);
+  border-right: 1px solid #ea580c;
 }
 
 /* Logo container enhancement */
@@ -555,13 +556,13 @@ nav {
 
 /* Footer section enhancement */
 section:last-child {
-  background: rgba(248, 250, 252, 0.8);
+  background: rgba(255, 247, 237, 0.9);
   backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(251, 146, 60, 0.1);
+  border-top: 1px solid rgba(251, 146, 60, 0.2);
 }
 
 .dark section:last-child {
-  background: rgba(15, 23, 42, 0.8);
-  border-top: 1px solid rgba(249, 115, 22, 0.2);
+  background: rgba(67, 20, 7, 0.9);
+  border-top: 1px solid rgba(249, 115, 22, 0.3);
 }
 </style>

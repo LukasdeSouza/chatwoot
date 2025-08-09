@@ -3,8 +3,8 @@
 
 // Sidebar principal - sobrescreve bg-n-solid-2
 aside.bg-n-solid-2 {
-  background: rgb(var(--orange-3)) !important;
-  border-color: rgb(var(--orange-6)) !important;
+  background: rgb(var(--orange-1)) !important;
+  border-color: rgb(var(--orange-4)) !important;
 }
 
 // No modo escuro
@@ -15,8 +15,8 @@ aside.bg-n-solid-2 {
 
 // Search box e compose button - sobrescreve bg-n-solid-3
 aside .bg-n-solid-3 {
-  background: rgb(var(--orange-4)) !important;
-  border-color: rgb(var(--orange-6)) !important;
+  background: rgb(var(--orange-2)) !important;
+  border-color: rgb(var(--orange-4)) !important;
 }
 
 .dark aside .bg-n-solid-3 {
@@ -26,7 +26,7 @@ aside .bg-n-solid-3 {
 
 // Outline classes no sidebar
 aside .outline-n-weak {
-  outline-color: rgb(var(--orange-6)) !important;
+  outline-color: rgb(var(--orange-4)) !important;
 }
 
 .dark aside .outline-n-weak {
@@ -71,7 +71,7 @@ aside .bg-n-strong {
 // Hover states para links e botões no sidebar
 aside a:hover,
 aside button:hover {
-  background: rgb(var(--orange-5)) !important;
+  background: rgb(var(--orange-3)) !important;
 }
 
 .dark aside a:hover,

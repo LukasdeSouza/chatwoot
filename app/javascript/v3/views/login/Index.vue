@@ -207,7 +207,7 @@ export default {
             Transforme a comunicação com seus clientes em experiências extraordinárias.
           </p>
           <small class="brand-credits">
-            desenvolvido por OmniTech Solutions
+            desenvolvido por Codetech Software
           </small>
           
           <!-- Features list -->
