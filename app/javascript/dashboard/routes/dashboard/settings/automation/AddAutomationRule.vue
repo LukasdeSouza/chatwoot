@@ -277,7 +277,7 @@ export default {
               <NextButton
                 icon="i-lucide-plus"
                 blue
-                faded
+                solid
                 sm
                 :label="$t('AUTOMATION.ADD.CONDITION_BUTTON_LABEL')"
                 @click="appendNewCondition"
@@ -320,7 +320,7 @@ export default {
               <NextButton
                 icon="i-lucide-plus"
                 blue
-                faded
+                solid
                 sm
                 :label="$t('AUTOMATION.ADD.ACTION_BUTTON_LABEL')"
                 @click="appendNewAction"

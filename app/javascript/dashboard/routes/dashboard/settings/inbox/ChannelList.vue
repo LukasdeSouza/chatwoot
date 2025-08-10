@@ -64,7 +64,7 @@ export default {
 
 <template>
   <div
-    class="w-full h-full col-span-6 p-6 overflow-auto border border-b-0 rounded-t-lg border-n-weak bg-n-solid-1"
+    class="w-full h-full col-span-6 p-6 overflow-auto border border-b-0 rounded-t-lg border-n-weak bg-slate-50"
   >
     <PageHeader
       class="max-w-4xl"
