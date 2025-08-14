@@ -127,3 +127,43 @@ function changeAvailabilityStatus(availability) {
     </div>
   </DropdownSection>
 </template>
+
+<style>
+/* Estilos específicos para o componente SidebarProfileMenuStatus */
+.flex-grow.flex.items-center.gap-1,
+.flex-grow.flex.items-center.gap-1 *,
+.size-4.text-n-slate-10,
+.i-lucide-info {
+  color: #9a3412 !important; /* orange-800 - texto laranja escuro */
+}
+
+/* Para o botão e seu conteúdo */
+.SidebarProfileMenuStatus button,
+.SidebarProfileMenuStatus button span,
+.SidebarProfileMenuStatus button div:not(.size-2) {
+  color: #9a3412 !important;
+}
+
+/* Para o toggle switch */
+.SidebarProfileMenuStatus .ToggleSwitch {
+  --switch-bg-color: #fdba74 !important; /* orange-300 */
+  --switch-active-color: #ea580c !important; /* orange-600 */
+}
+
+/* Para garantir que todos os textos neste componente sejam visíveis */
+.SidebarProfileMenuStatus .DropdownItem,
+.SidebarProfileMenuStatus .DropdownItem *,
+.SidebarProfileMenuStatus div,
+.SidebarProfileMenuStatus span,
+.SidebarProfileMenuStatus p {
+  color: #9a3412 !important;
+}
+
+/* Para ícones específicos */
+.SidebarProfileMenuStatus svg,
+.SidebarProfileMenuStatus [class*="i-lucide-"] {
+  color: #ea580c !important; /* orange-600 */
+  fill: #ea580c !important;
+  stroke: #ea580c !important;
+}
+</style>

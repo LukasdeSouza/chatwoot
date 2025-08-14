@@ -492,7 +492,7 @@ const menuItems = computed(() => {
       </ul>
     </nav>
     <section
-      class="p-1 border-t border-n-weak shadow-[0px_-2px_4px_0px_rgba(27,28,29,0.02)] flex-shrink-0 flex justify-between gap-2 items-center"
+      class="p-1 border-t border-n-weak shadow-[0px_-2px_4px_0px_rgba(27,28,29,0.09)] flex-shrink-0 flex justify-between gap-2 items-center"
     >
       <SidebarProfileMenu
         @open-key-shortcut-modal="emit('openKeyShortcutModal')"
@@ -504,13 +504,13 @@ const menuItems = computed(() => {
 <style scoped>
 /* OmniTech Sidebar Customization */
 aside {
-  background: linear-gradient(145deg, #fff7ed 0%, #fed7aa 100%);
-  border-right: 1px solid #fb923c;
+  background: linear-gradient(145deg, #f97316 0%, #fb923c 100%) !important;
+  border-right: 1px solid #fdba74;
 }
 
 .dark aside {
-  background: linear-gradient(145deg, #431407 0%, #7c2d12 100%);
-  border-right: 1px solid #ea580c;
+  background: linear-gradient(145deg, #ea580c 0%, #f97316 100%) !important;
+  border-right: 1px solid #fb923c;
 }
 
 /* Logo container enhancement */
@@ -526,27 +526,112 @@ aside {
   color: white !important;
 }
 
-/* Search bar enhancement */
+/* Corrigindo a barra de pesquisa - com fundo branco sólido */
+RouterLink.rounded-lg,
 .outline.outline-1.outline-n-weak {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(251, 146, 60, 0.2);
-  transition: all 0.2s ease;
+  background-color: white !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
 }
 
+/* Corrigindo o texto dentro da barra de pesquisa */
+RouterLink.rounded-lg span,
+RouterLink.rounded-lg div,
+.outline.outline-1.outline-n-weak span,
+.outline.outline-1.outline-n-weak div {
+  color: #4b5563 !important;
+}
+
+/* Ícone de pesquisa */
+RouterLink.rounded-lg .i-lucide-search,
+.outline.outline-1.outline-n-weak .i-lucide-search {
+  color: #f97316 !important;
+}
+
+/* Hover na barra de pesquisa */
+RouterLink.rounded-lg:hover,
 .outline.outline-1.outline-n-weak:hover {
-  border-color: rgba(251, 146, 60, 0.4);
-  box-shadow: 0 2px 8px rgba(251, 146, 60, 0.1);
+  border-color: #f97316 !important;
+  box-shadow: 0 1px 3px rgba(249, 115, 22, 0.2) !important;
 }
 
-.dark .outline.outline-1.outline-n-weak {
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(249, 115, 22, 0.3);
+/* Botão ao lado da barra de pesquisa com cor contrastante */
+Button[class*="bg-n-solid-3"],
+[class*="bg-n-solid-3"] {
+  background-color: white !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+Button[class*="bg-n-solid-3"]:hover,
+[class*="bg-n-solid-3"]:hover {
+  background-color: #f9fafb !important;
+  border-color: #f97316 !important;
+}
+
+/* Ícone dentro do botão */
+Button[class*="bg-n-solid-3"] .i-lucide-message-square-plus,
+[class*="bg-n-solid-3"] .i-lucide-message-square-plus {
+  color: #f97316 !important;
 }
 
 /* Navigation enhancement */
 nav {
   padding-top: 16px;
+}
+
+/* Textos e ícones no sidebar */
+:deep(.text-n-important), 
+:deep(.text-n-strong), 
+:deep(.text-n-normal), 
+:deep(.text-n-weak), 
+:deep(.sidebar-item__icon), 
+:deep(.sidebar-item__text),
+:deep(a),
+:deep(span),
+:deep(div),
+:deep(p) {
+  color: white !important;
+}
+
+/* EXCEÇÃO: itens da barra de pesquisa e botão */
+.outline.outline-1.outline-n-weak :deep(span),
+.outline.outline-1.outline-n-weak :deep(div),
+Button[class*="bg-n-solid-3"] :deep(span),
+RouterLink.rounded-lg :deep(span),
+RouterLink.rounded-lg :deep(div) {
+  color: #4b5563 !important;
+}
+
+/* Garantindo que todos os ícones SVG sejam brancos */
+:deep(svg), 
+:deep(svg *) {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* EXCEÇÃO: ícones da barra de pesquisa e botão */
+.outline.outline-1.outline-n-weak :deep(svg),
+.outline.outline-1.outline-n-weak :deep(svg *),
+Button[class*="bg-n-solid-3"] :deep(svg),
+Button[class*="bg-n-solid-3"] :deep(svg *),
+RouterLink.rounded-lg :deep(svg),
+RouterLink.rounded-lg :deep(svg *) {
+  color: #f97316 !important;
+  fill: #f97316 !important;
+  stroke: none !important;
+}
+
+/* Item ativo com fundo semi-transparente para melhor contraste */
+:deep(.router-link-active),
+:deep(.router-link-exact-active),
+:deep(.sidebar__item--active) {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+:deep(.sidebar__item:hover) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Footer section enhancement */
@@ -559,5 +644,27 @@ section:last-child {
 .dark section:last-child {
   background: rgba(67, 20, 7, 0.9);
   border-top: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+/* Textos e ícones em branco */
+:deep(.sidebar__item), 
+:deep(.sidebar__item-icon), 
+:deep(.sidebar__item-text),
+:deep(.sidebar-item__icon), 
+:deep(.sidebar-item__text) {
+  color: white !important;
+}
+
+:deep(.sidebar__item--active) {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+:deep(.sidebar__item:hover) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:deep(svg path), :deep(svg) {
+  color: white !important;
+  fill: white !important;
 }
 </style>

@@ -1,0 +1,103 @@
+/*
+ * Tema personalizado para o Super Admin
+ * Este arquivo será importado após o CSS padrão
+ */
+
+/* Cores principais */
+:root {
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --orange-800: #9a3412;
+  --white: #ffffff;
+}
+
+/* Botões primários */
+.login-page .btn,
+.login-page .button,
+.login-page input[type="submit"],
+.login-page button[type="submit"] {
+  background-color: var(--orange-600) !important;
+  border-color: var(--orange-700) !important;
+  color: var(--white) !important;
+}
+
+.login-page .btn:hover,
+.login-page .button:hover,
+.login-page input[type="submit"]:hover,
+.login-page button[type="submit"]:hover {
+  background-color: var(--orange-700) !important;
+  border-color: var(--orange-800) !important;
+}
+
+form input[type="submit"],
+.devise-page input[type="submit"],
+.super-admin input[type="submit"] {
+  background-color: var(--orange-600) !important;
+  border-color: var(--orange-700) !important;
+  color: var(--white) !important;
+}
+
+/* Links e elementos ativos */
+a, .text-primary, .text-blue-500 {
+  color: var(--orange-600) !important;
+}
+
+a:hover {
+  color: var(--orange-700) !important;
+}
+
+/* Cabeçalhos de tabelas */
+thead th, .card-title, .page-header {
+  background-color: var(--orange-500) !important;
+  color: var(--white) !important;
+}
+
+/* Elementos de navegação ativos */
+.tabs .tabs-title.is-active a, 
+.tabs-title > a[aria-selected='true'],
+.active-tab {
+  background-color: var(--orange-600) !important;
+  color: var(--white) !important;
+}
+
+/* Bordas e destaques */
+.border-primary, .hover:border-primary:hover, 
+.focus:border-primary:focus {
+  border-color: var(--orange-600) !important;
+}
+
+/* Elementos de paginação */
+.pagination .active a {
+  background-color: var(--orange-600) !important;
+  border-color: var(--orange-600) !important;
+  color: var(--white) !important;
+}
+
+/* Outros elementos específicos */
+.status--active, .badge.badge--success {
+  background-color: var(--orange-600) !important;
+}
+
+/* Elementos de formulário */
+input:focus, select:focus, textarea:focus {
+  border-color: var(--orange-600) !important;
+  box-shadow: 0 0 0 0.2rem rgba(249, 115, 22, 0.25) !important;
+}
+
+/* Cabeçalho principal */
+.main-header {
+  background-color: var(--orange-600) !important;
+}
+
+/* Sidebar ativo */
+.sidebar .sidebar-menu .active {
+  background-color: var(--orange-500) !important;
+  color: var(--white) !important;
+}
+
+/* Notificações e alertas */
+.alert-success, .success {
+  background-color: var(--orange-500) !important;
+  border-color: var(--orange-600) !important;
+}

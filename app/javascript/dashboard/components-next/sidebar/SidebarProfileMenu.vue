@@ -140,3 +140,139 @@ const allowedMenuItems = computed(() => {
     </DropdownBody>
   </DropdownContainer>
 </template>
+
+<style>
+/* Estilos globais para o dropdown do perfil com fundo laranja claro e texto escuro */
+.DropdownBody *,
+.DropdownContent * {
+  color: #9a3412 !important; /* orange-800 */
+}
+
+.DropdownContent,
+.n-dropdown-body {
+  background: #fff7ed !important; /* orange-50 - fundo laranja muito claro */
+  border: 1px solid #fdba74 !important; /* orange-300 */
+  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.15) !important;
+  backdrop-filter: none !important;
+}
+
+/* Garantindo que TODOS os textos dentro do dropdown sejam escuros e visíveis */
+.DropdownContent *,
+.n-dropdown-body * {
+  color: #9a3412 !important; /* orange-800 - texto laranja escuro */
+}
+
+.DropdownContent .text-n-slate-12,
+.DropdownContent .text-n-strong,
+.DropdownContent .DropdownItem > div,
+.DropdownContent .font-medium,
+.DropdownContent span,
+.DropdownContent p,
+.DropdownContent div,
+.DropdownContent a,
+.DropdownContent button,
+.DropdownItem div,
+.DropdownItem span,
+.n-dropdown-body .text-n-slate-12,
+.n-dropdown-body .text-n-strong,
+.n-dropdown-body .DropdownItem > div,
+.n-dropdown-body .font-medium,
+.n-dropdown-body span,
+.n-dropdown-body p,
+.n-dropdown-body div,
+.n-dropdown-body a,
+.n-dropdown-body button,
+.SidebarProfileMenuStatus *,
+.DropdownContent .text-n-slate-11,
+.DropdownContent .text-n-weak,
+.n-dropdown-body .text-n-slate-11,
+.n-dropdown-body .text-n-weak {
+  color: #9a3412 !important; /* orange-800 - texto laranja escuro */
+}
+
+/* Status do usuário - com cor contrastante */
+.SidebarProfileMenuStatus {
+  background-color: #ffedd5 !important; /* orange-100 */
+  border-radius: 8px;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #fed7aa !important; /* orange-200 */
+}
+
+/* Item do dropdown no hover */
+.DropdownContent .DropdownItem:hover,
+.n-dropdown-body .DropdownItem:hover {
+  background-color: #fed7aa !important; /* orange-200 */
+}
+
+/* Separador com cor contrastante */
+.DropdownContent .DropdownSeparator,
+.DropdownSeparator,
+.n-dropdown-body .DropdownSeparator,
+div.h-0.border-b {
+  background-color: #fdba74 !important; /* orange-300 */
+  border-color: #fdba74 !important; /* orange-300 */
+  height: 1px !important;
+  margin: 4px 0 !important;
+}
+
+/* Cores para os ícones */
+.DropdownContent svg,
+.DropdownContent svg *,
+.DropdownContent [class*="i-lucide-"],
+.DropdownItem svg,
+.DropdownItem [class*="i-lucide-"],
+.n-dropdown-body svg,
+.n-dropdown-body svg *,
+.n-dropdown-body [class*="i-lucide-"] {
+  color: #ea580c !important; /* orange-600 - laranja médio para ícones */
+  fill: #ea580c !important;
+  stroke: #ea580c !important;
+}
+
+/* Seletor de disponibilidade */
+.DropdownContent select,
+.DropdownContent select option,
+.n-dropdown-body select,
+.n-dropdown-body select option {
+  background-color: #ffedd5 !important; /* orange-100 */
+  color: #9a3412 !important; /* orange-800 */
+  border-color: #fdba74 !important; /* orange-300 */
+}
+
+/* Checkboxes e controles específicos */
+.DropdownContent input[type="checkbox"],
+.n-dropdown-body input[type="checkbox"] {
+  accent-color: #f97316 !important; /* orange-500 */
+}
+
+/* Resetando qualquer backdrop-blur que possa interferir */
+.n-dropdown-body.backdrop-blur-\[100px\] {
+  backdrop-filter: none !important;
+}
+
+/* Garantindo que o pseudo-elemento before não adicione blur */
+.before\:backdrop-blur-sm::before {
+  backdrop-filter: none !important;
+}
+</style>
+
+<style scoped>
+/* Estilo para o botão do perfil */
+button.flex {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.2s ease;
+}
+
+button.flex:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Cor do texto no botão do perfil */
+button.flex .text-n-slate-12,
+button.flex .text-n-slate-11 {
+  color: white !important;
+}
+</style>
