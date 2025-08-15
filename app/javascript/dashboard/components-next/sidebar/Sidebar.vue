@@ -376,7 +376,7 @@ const menuItems = computed(() => {
         {
           name: 'Settings Agent Bots',
           label: t('SIDEBAR.AGENT_BOTS'),
-          icon: 'i-lucide-robot',
+          icon: 'i-lucide-smile-plus',
           to: accountScopedRoute('agent_bots'),
         },
         {
@@ -397,30 +397,30 @@ const menuItems = computed(() => {
           icon: 'i-lucide-puzzle',
           to: accountScopedRoute('settings_applications'),
         },
-        {
-          name: 'Settings Audit Logs',
-          label: t('SIDEBAR.AUDIT_LOGS'),
-          icon: 'i-lucide-file-text',
-          to: accountScopedRoute('auditlogs_list'),
-        },
-        {
-          name: 'Settings Custom Roles',
-          label: t('SIDEBAR.CUSTOM_ROLES'),
-          icon: 'i-lucide-shield-check',
-          to: accountScopedRoute('custom_roles_list'),
-        },
-        {
-          name: 'Settings Sla',
-          label: t('SIDEBAR.SLA'),
-          icon: 'i-lucide-timer',
-          to: accountScopedRoute('sla_list'),
-        },
-        {
-          name: 'Settings Billing',
-          label: t('SIDEBAR.BILLING'),
-          icon: 'i-lucide-credit-card',
-          to: accountScopedRoute('billing_settings_index'),
-        },
+        // {
+        //   name: 'Settings Audit Logs',
+        //   label: t('SIDEBAR.AUDIT_LOGS'),
+        //   icon: 'i-lucide-file-text',
+        //   to: accountScopedRoute('auditlogs_list'),
+        // },
+        // {
+        //   name: 'Settings Custom Roles',
+        //   label: t('SIDEBAR.CUSTOM_ROLES'),
+        //   icon: 'i-lucide-shield-check',
+        //   to: accountScopedRoute('custom_roles_list'),
+        // },
+        // {
+        //   name: 'Settings Sla',
+        //   label: t('SIDEBAR.SLA'),
+        //   icon: 'i-lucide-timer',
+        //   to: accountScopedRoute('sla_list'),
+        // },
+        // {
+        //   name: 'Settings Billing',
+        //   label: t('SIDEBAR.BILLING'),
+        //   icon: 'i-lucide-credit-card',
+        //   to: accountScopedRoute('billing_settings_index'),
+        // },
       ],
     },
   ];
@@ -433,7 +433,7 @@ const menuItems = computed(() => {
       closeMobileSidebar,
       { ignore: ['#mobile-sidebar-launcher'] },
     ]"
-    class="bg-n-slate-1 rtl:border-l ltr:border-r border-n-weak flex flex-col text-sm pb-1 fixed top-0 ltr:left-0 rtl:right-0 h-full z-40 transition-transform duration-200 ease-in-out md:static w-[200px] basis-[200px] md:flex-shrink-0 md:ltr:translate-x-0 md:rtl:-translate-x-0"
+    class="bg-n-slate-1 rtl:border-l ltr:border-r border-n-weak flex flex-col text-sm pb-1 fixed top-0 ltr:left-0 rtl:right-0 h-full z-40 transition-transform duration-200 ease-in-out md:static w-[280px] basis-[200px] md:flex-shrink-0 md:ltr:translate-x-0 md:rtl:-translate-x-0"
     :class="[
       {
         'ltr:translate-x-0 rtl:-translate-x-0 shadow-lg md:shadow-none':
@@ -445,10 +445,10 @@ const menuItems = computed(() => {
   >
     <section class="grid gap-2 mt-2 mb-4">
       <div class="flex items-center min-w-0 gap-2 px-2">
-        <div class="grid flex-shrink-0 size-6 place-content-center">
+        <!-- <div class="grid flex-shrink-0 size-6 place-content-center">
           <Logo class="size-4" />
-        </div>
-        <div class="flex-shrink-0 w-px h-3 bg-n-strong" />
+        </div> -->
+        <!-- <div class="flex-shrink-0 w-px h-3 bg-n-strong" />  -->
         <SidebarAccountSwitcher
           class="flex-grow min-w-0 -mx-1"
           @show-create-account-modal="emit('showCreateAccountModal')"
@@ -653,6 +653,17 @@ section:last-child {
 :deep(.sidebar-item__icon), 
 :deep(.sidebar-item__text) {
   color: white !important;
+}
+
+:deep(.sidebar__item .sidebar-item__text:hover),
+:deep(.sidebar__item:hover .sidebar-item__text),
+:deep(.sidebar__item--sub:hover),
+:deep(.sidebar__item .sidebar__subitem:hover),
+:deep(.sidebar__subitem:hover),
+:deep(.sidebar-group__item:hover),
+:deep(.sidebar-group__subitem:hover) {
+  color: #ea580c !important; /* orange-600 */
+  text-shadow: 0 1px 4px rgba(251, 146, 60, 0.15);
 }
 
 :deep(.sidebar__item--active) {

@@ -273,6 +273,6 @@ button.flex:hover {
 /* Cor do texto no botão do perfil */
 button.flex .text-n-slate-12,
 button.flex .text-n-slate-11 {
-  color: white !important;
+  color: #222 !important;
 }
 </style>

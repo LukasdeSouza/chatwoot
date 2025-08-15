@@ -54,13 +54,13 @@ const emitNewAccount = () => {
         :class="[
           isOpen && 'bg-n-alpha-1',
           showAccountSwitcher
-            ? 'hover:bg-n-alpha-1 cursor-pointer'
+            ? 'cursor-pointer'
             : 'cursor-default',
         ]"
         @click="() => showAccountSwitcher && toggle()"
       >
         <span
-          class="text-sm font-medium leading-5 text-n-slate-12 truncate"
+          class="text-lg font-medium leading-5 text-n-slate-12 truncate"
           aria-live="polite"
         >
           {{ currentAccount.name }}

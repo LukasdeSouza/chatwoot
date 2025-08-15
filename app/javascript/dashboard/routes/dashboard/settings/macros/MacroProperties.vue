@@ -35,7 +35,7 @@ export default {
 
 <template>
   <div
-    class="p-4 bg-n-solid-2 border border-n-weak rounded-lg shadow-sm h-full flex flex-col"
+    class="p-4 bg-n-slate-4 border border-n-weak rounded-lg shadow-sm h-full flex flex-col"
   >
     <div>
       <woot-input
