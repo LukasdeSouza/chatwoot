@@ -284,7 +284,7 @@ export default {
                     @input="v$.credentials.password.$touch"
                   />
                   
-                  <div class="forgot-password">
+                  <!-- <div class="forgot-password">
                     <router-link
                       v-if="!globalConfig.disableUserProfileUpdate"
                       to="auth/reset/password"
@@ -293,7 +293,7 @@ export default {
                     >
                       {{ $t('LOGIN.FORGOT_PASSWORD') }}
                     </router-link>
-                  </div>
+                  </div> -->
                 </div>
 
                 <NextButton
