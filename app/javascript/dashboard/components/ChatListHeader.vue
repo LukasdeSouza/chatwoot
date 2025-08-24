@@ -73,14 +73,14 @@ const toggleConversationLayout = () => {
         v-if="
           allCount > 0 && hasAppliedFiltersOrActiveFolders && !isListLoading
         "
-        class="px-2 py-1 my-0.5 mx-1 rounded-md capitalize bg-n-slate-3 text-xxs text-n-slate-12 shrink-0"
+        class="px-2 py-1 my-0.5 mx-1 rounded-md capitalize bg-n-slate-3 text-xsm text-n-slate-12 shrink-0"
         :title="allCount"
       >
         {{ formattedAllCount }}
       </span>
       <span
         v-if="!hasAppliedFiltersOrActiveFolders"
-        class="px-2 py-1 my-0.5 mx-1 rounded-md capitalize bg-n-slate-3 text-xxs text-n-slate-12 shrink-0"
+        class="px-2 py-1 my-0.5 mx-1 rounded-md capitalize bg-n-slate-3 text-xsm text-n-slate-12 shrink-0"
       >
         {{ $t(`CHAT_LIST.CHAT_STATUS_FILTER_ITEMS.${activeStatus}.TEXT`) }}
       </span>
@@ -92,7 +92,7 @@ const toggleConversationLayout = () => {
             v-tooltip.top-end="$t('FILTER.CUSTOM_VIEWS.ADD.SAVE_BUTTON')"
             icon="i-lucide-save"
             slate
-            xs
+            sm
             faded
             @click="emit('addFolders')"
           />
@@ -107,7 +107,7 @@ const toggleConversationLayout = () => {
           icon="i-lucide-circle-x"
           ruby
           faded
-          xs
+          sm
           @click="emit('resetFilters')"
         />
       </template>
@@ -118,7 +118,7 @@ const toggleConversationLayout = () => {
             v-tooltip.top-end="$t('FILTER.CUSTOM_VIEWS.EDIT.EDIT_BUTTON')"
             icon="i-lucide-pen-line"
             slate
-            xs
+            sm
             faded
             @click="emit('filtersModal')"
           />
@@ -133,7 +133,7 @@ const toggleConversationLayout = () => {
           v-tooltip.top-end="$t('FILTER.CUSTOM_VIEWS.DELETE.DELETE_BUTTON')"
           icon="i-lucide-trash-2"
           ruby
-          xs
+          sm
           faded
           @click="emit('deleteFolders')"
         />
@@ -144,7 +144,7 @@ const toggleConversationLayout = () => {
           v-tooltip.right="$t('FILTER.TOOLTIP_LABEL')"
           icon="i-lucide-list-filter"
           slate
-          xs
+          sm
           faded
           @click="emit('filtersModal')"
         />

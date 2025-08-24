@@ -137,7 +137,7 @@ const handleSortChange = value => {
       icon="i-lucide-arrow-up-down"
       slate
       faded
-      xs
+      sm
       @click="toggleDropdown()"
     />
     <div

@@ -29,7 +29,7 @@ export default {
         : 'i-lucide-arrow-right-to-line'
     "
     slate
-    xs
+    sm
     faded
     class="flex-shrink-0 rtl:rotate-180 ltr:rotate-0 md:inline-flex hidden"
     @click="toggle"
