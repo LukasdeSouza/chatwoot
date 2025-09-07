@@ -60,7 +60,7 @@ const targetInboxLabel = computed(() => {
       <Button
         variant="ghost"
         icon="i-lucide-x"
-        color="slate"
+        color="primary"
         size="xs"
         class="flex-shrink-0"
         @click="emit('updateInbox', null)"
@@ -75,7 +75,7 @@ const targetInboxLabel = computed(() => {
         :label="t('COMPOSE_NEW_CONVERSATION.FORM.INBOX_SELECTOR.BUTTON')"
         variant="link"
         size="sm"
-        :color="hasErrors ? 'ruby' : 'slate'"
+        :color="hasErrors ? 'ruby' : 'primary'"
         :disabled="!selectedContact"
         class="hover:!no-underline"
         @click="emit('toggleDropdown', !showInboxesDropdown)"

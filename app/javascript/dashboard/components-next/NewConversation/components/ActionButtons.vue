@@ -163,7 +163,7 @@ useKeyboardEvents(keyboardEvents);
       >
         <Button
           icon="i-lucide-smile-plus"
-          color="slate"
+          color="primary"
           size="sm"
           class="!w-10"
           @click="isEmojiPickerOpen = !isEmojiPickerOpen"
@@ -191,7 +191,7 @@ useKeyboardEvents(keyboardEvents);
       >
         <Button
           icon="i-lucide-plus"
-          color="slate"
+          color="primary"
           size="sm"
           class="!w-10 relative"
         />
@@ -199,7 +199,7 @@ useKeyboardEvents(keyboardEvents);
       <Button
         v-if="hasSelectedInbox && !isWhatsappInbox"
         icon="i-lucide-signature"
-        color="slate"
+        color="primary"
         size="sm"
         class="!w-10"
         @click="toggleMessageSignature"
@@ -210,7 +210,7 @@ useKeyboardEvents(keyboardEvents);
       <Button
         :label="t('COMPOSE_NEW_CONVERSATION.FORM.ACTION_BUTTONS.DISCARD')"
         variant="faded"
-        color="slate"
+        color="ruby"
         size="sm"
         class="!text-xs font-medium"
         @click="emit('discard')"
